@@ -37,6 +37,7 @@ const typeController = (e) => {
   if (!validLetters.includes(newLetter)) {
     return;
   }
+  let falutCount = 0
 
   userText += newLetter;
 
@@ -46,7 +47,9 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount++
   }
+  
 
   // check if given question text is equal to user typed text
   if (questionText === userText) {
