@@ -37,7 +37,7 @@ const typeController = (e) => {
   if (!validLetters.includes(newLetter)) {
     return;
   }
-  let falutCount = 0
+  
 
   userText += newLetter;
 
